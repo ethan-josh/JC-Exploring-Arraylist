@@ -141,3 +141,98 @@ remove("Primary Objective") searches the list for the first occurrence of the gi
 
 ---
 
+### Exercise 4: Searching the List (contains and indexOf)
+
+**Code to run:**
+```
+import java.util.ArrayList;
+
+public class ArrayListLab {
+    public static void main(String[] args) {
+        ArrayList<String> waypoints = new ArrayList<>();
+        waypoints.add("Alpha");
+        waypoints.add("Bravo");
+        waypoints.add("Charlie");
+
+        boolean hasBravo = waypoints.contains("Bravo");
+        System.out.println("Does the list contain 'Bravo'? " + hasBravo);
+
+        int indexOfCharlie = waypoints.indexOf("Charlie");
+        System.out.println("Index of 'Charlie': " + indexOfCharlie);
+
+        int indexOfDelta = waypoints.indexOf("Delta");
+        System.out.println("Index of 'Delta': " + indexOfDelta);
+    }
+}
+```
+**Predicted Output:**
+```
+Does the list contain 'Bravo'? true
+Index of 'Charlie': 2
+Index of 'Delta': -1
+```
+
+**Actual Output:**
+
+<img src="https://github.com/ethan-josh/JC-Exploring-Arraylist/blob/main/images/Ex4.png"/>
+
+**Explanation:**
+contains("Bravo") iterates through the list and returns true because it finds an element that is equal to "Bravo".
+
+indexOf("Charlie") returns the index of the first occurrence of the specified element, which is 2.
+
+indexOf("Delta") searches for "Delta", but since it's not in the list, the method returns -1. This is a standard way to indicate that an item was not found.
+
+---
+
+### Exercise 5: Iterating Through the List
+
+**Code to run:**
+```
+import java.util.ArrayList;
+
+public class ArrayListLab {
+    public static void main(String[] args) {
+        ArrayList<String> squad = new ArrayList<>();
+        squad.add("Leader");
+        squad.add("Medic");
+        squad.add("Engineer");
+        squad.add("Scout");
+
+        System.out.println("--- Using an Enhanced For-Loop ---");
+        for (String role : squad) {
+            System.out.println("Role: " + role);
+        }
+        
+        System.out.println("\n--- Using a Standard For-Loop with index ---");
+        for (int i = 0; i < squad.size(); i++) {
+            System.out.println("Role at index " + i + ": " + squad.get(i));
+        }
+    }
+}
+```
+**Predicted Output:**
+```
+--- Using an Enhanced For-Loop ---
+Role: Leader
+Role: Medic
+Role: Engineer
+Role: Scout
+
+--- Using a Standard For-Loop with index ---
+Role at index 0: Leader
+Role at index 1: Medic
+Role at index 2: Engineer
+Role at index 3: Scout
+```
+
+**Actual Output:**
+
+<img src="https://github.com/ethan-josh/JC-Exploring-Arraylist/blob/main/images/Ex5.png"/>
+
+**Explanation:**
+The enhanced for-loop (or for-each loop) is a clean and simple way to iterate over each element in a collection without worrying about indices. It's best used when you just need to access each element in order.
+
+The standard for-loop gives you more control by providing the index i. This is necessary when you need to know the position of an element, or if you need to modify the list while iterating (though that should be done with care).
+
+---

@@ -39,26 +39,48 @@ public class ArrayListLab {
         objectives.add("Primary Objective");
         objectives.add("Tertiary Objective");
         
-        // Insert a new objective at index 1
         objectives.add(1, "Secondary Objective");
-        System.out.println("List after insertion: " + objectives);
-        
-        // Remove the objective at index 2
+        //System.out.println("List after insertion: " + objectives);
+
         String removedObjective = objectives.remove(2);
-        System.out.println("Removed objective: " + removedObjective);
-        System.out.println("List after removing by index: " + objectives);
-        
-        // Remove a specific objective by its value
+        //System.out.println("Removed objective: " + removedObjective);
+        //System.out.println("List after removing by index: " + objectives);
         objectives.remove("Primary Objective");
-        System.out.println("List after removing by object: " + objectives);
+        //System.out.println("List after removing by object: " + objectives);
         // ******************************************
 
         // Exercise #4 ******************************
-        
+        ArrayList<String> waypoints = new ArrayList<>();
+        waypoints.add("Alpha");
+        waypoints.add("Bravo");
+        waypoints.add("Charlie");
+
+        boolean hasBravo = waypoints.contains("Bravo");
+        //System.out.println("Does the list contain 'Bravo'? " + hasBravo);
+
+        int indexOfCharlie = waypoints.indexOf("Charlie");
+        //System.out.println("Index of 'Charlie': " + indexOfCharlie);
+
+        int indexOfDelta = waypoints.indexOf("Delta");
+        //System.out.println("Index of 'Delta': " + indexOfDelta);
         // ******************************************
 
         // Exercise #5 ******************************
+        ArrayList<String> squad = new ArrayList<>();
+        squad.add("Leader");
+        squad.add("Medic");
+        squad.add("Engineer");
+        squad.add("Scout");
+
+        System.out.println("--- Using an Enhanced For-Loop ---");
+        for (String role : squad) {
+            System.out.println("Role: " + role);
+        }
         
+        System.out.println("\n--- Using a Standard For-Loop with index ---");
+        for (int i = 0; i < squad.size(); i++) {
+            System.out.println("Role at index " + i + ": " + squad.get(i));
+        }
         // ******************************************
 
         // Exercise #6 ******************************
