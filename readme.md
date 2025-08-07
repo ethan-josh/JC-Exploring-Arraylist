@@ -92,7 +92,7 @@ The set(0, "GPS") method replaces the element at index 0 ("Compass") with the ne
 
 ---
 
-### Exercise 2: Accessing and Modifying Elements (get and set)
+### Exercise 3: Inserting and Removing Elements (add at index and remove)
 
 **Code to run:**
 ```
@@ -100,28 +100,31 @@ import java.util.ArrayList;
 
 public class ArrayListLab {
     public static void main(String[] args) {
-        ArrayList<String> equipment = new ArrayList<>();
-        equipment.add("Compass");
-        equipment.add("Map");
-        equipment.add("Radio");
-
-        String secondItem = equipment.get(1);
-        System.out.println("Item at index 1: " + secondItem);
+        ArrayList<String> objectives = new ArrayList<>();
+        objectives.add("Primary Objective");
+        objectives.add("Tertiary Objective");
         
-        System.out.println("List before modification: " + equipment);
+        // Insert a new objective at index 1
+        objectives.add(1, "Secondary Objective");
+        System.out.println("List after insertion: " + objectives);
         
-        // The compass is upgraded to a GPS
-        equipment.set(0, "GPS");
+        // Remove the objective at index 2
+        String removedObjective = objectives.remove(2);
+        System.out.println("Removed objective: " + removedObjective);
+        System.out.println("List after removing by index: " + objectives);
         
-        System.out.println("List after modification: " + equipment);
+        // Remove a specific objective by its value
+        objectives.remove("Primary Objective");
+        System.out.println("List after removing by object: " + objectives);
     }
 }
 ```
 **Predicted Output:**
 ```
-Item at index 1: Map
-List before modification: [Compass, Map, Radio]
-List after modification: [GPS, Map, Radio]
+List after insertion: [Primary Objective, Secondary Objective, Tertiary Objective]
+Removed objective: Tertiary Objective
+List after removing by index: [Primary Objective, Secondary Objective]
+List after removing by object: [Secondary Objective]
 ```
 
 **Actual Output:**
@@ -130,6 +133,8 @@ List after modification: [GPS, Map, Radio]
 
 **Explanation:**
 
-ArrayLists are zero-indexed, meaning the first element is at index 0, the second at index 1, and so on. equipment.get(1) retrieves the element at the second position, which is "Map".
+add(1, "Secondary Objective") inserts the new element at index 1. The existing element at that position ("Tertiary Objective") and all subsequent elements are shifted one position to the right.
 
-The set(0, "GPS") method replaces the element at index 0 ("Compass") with the new element ("GPS"). This method overwrites the existing value at that specific position.
+remove(2) removes the element at index 2 ("Tertiary Objective") and returns it. The list size decreases, and any elements after the removed one shift to the left to fill the gap.
+
+remove("Primary Objective") searches the list for the first occurrence of the given object and removes it.
