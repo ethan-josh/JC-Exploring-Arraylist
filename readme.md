@@ -236,3 +236,45 @@ The enhanced for-loop (or for-each loop) is a clean and simple way to iterate ov
 The standard for-loop gives you more control by providing the index i. This is necessary when you need to know the position of an element, or if you need to modify the list while iterating (though that should be done with care).
 
 ---
+
+### Exercise 6: Clearing the List (clear)
+
+**Code to run:**
+```
+import java.util.ArrayList;
+
+public class ArrayListLab {
+    public static void main(String[] args) {
+        ArrayList<String> intel = new ArrayList<>();
+        intel.add("Enemy position: Sector 4");
+        intel.add("Weakness: Power generator");
+        
+        System.out.println("Intel count before mission: " + intel.size());
+        System.out.println("Intel list: " + intel);
+        
+        // After the mission, the intel is no longer needed
+        intel.clear();
+        
+        System.out.println("\nIntel count after mission: " + intel.size());
+        System.out.println("Is the intel list empty now? " + intel.isEmpty());
+        System.out.println("Intel list: " + intel);
+    }
+}
+```
+**Predicted Output:**
+```
+Intel count before mission: 2
+Intel list: [Enemy position: Sector 4, Weakness: Power generator]
+
+Intel count after the mission: 0
+Is the intel list empty now? true
+Intel list: []
+```
+
+**Actual Output:**
+
+<img src="https://github.com/ethan-josh/JC-Exploring-Arraylist/blob/main/images/Ex6.png"/>
+
+**Explanation:**
+ 
+ The clear() method is straightforward: it removes every single element from the ArrayList. After the call to clear(), the list's size() becomes 0, and isEmpty() returns true.

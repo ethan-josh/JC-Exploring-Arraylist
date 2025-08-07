@@ -72,19 +72,31 @@ public class ArrayListLab {
         squad.add("Engineer");
         squad.add("Scout");
 
-        System.out.println("--- Using an Enhanced For-Loop ---");
+        //System.out.println("--- Using an Enhanced For-Loop ---");
         for (String role : squad) {
-            System.out.println("Role: " + role);
+            //System.out.println("Role: " + role);
         }
         
-        System.out.println("\n--- Using a Standard For-Loop with index ---");
+        //System.out.println("\n--- Using a Standard For-Loop with index ---");
         for (int i = 0; i < squad.size(); i++) {
-            System.out.println("Role at index " + i + ": " + squad.get(i));
+            //System.out.println("Role at index " + i + ": " + squad.get(i));
         }
         // ******************************************
 
         // Exercise #6 ******************************
+        ArrayList<String> intel = new ArrayList<>();
+        intel.add("Enemy position: Sector 4");
+        intel.add("Weakness: Power generator");
         
+        System.out.println("Intel count before mission: " + intel.size());
+        System.out.println("Intel list: " + intel);
+        
+        // After the mission, the intel is no longer needed
+        intel.clear();
+        
+        System.out.println("\nIntel count after mission: " + intel.size());
+        System.out.println("Is the intel list empty now? " + intel.isEmpty());
+        System.out.println("Intel list: " + intel);        
         // ******************************************
 
 
