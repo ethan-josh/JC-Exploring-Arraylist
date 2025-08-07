@@ -34,7 +34,7 @@ Number of tasks: 3
 
 **Actual Output:**
 
-<img src="https://github.com/ethan-josh/JC-Exploring-JavaDateTime/blob/main/images/Ex1.png"/>
+<img src="https://github.com/ethan-josh/JC-Exploring-Arraylist/blob/main/images/Ex1.png"/>
 
 **Explanation:**
 
@@ -82,7 +82,7 @@ List after modification: [GPS, Map, Radio]
 
 **Actual Output:**
 
-<img src="https://github.com/ethan-josh/JC-Exploring-JavaDateTime/blob/main/images/Ex2.png"/>
+<img src="https://github.com/ethan-josh/JC-Exploring-Arraylist/blob/main/images/Ex2.png"/>
 
 **Explanation:**
 
@@ -129,7 +129,7 @@ List after removing by object: [Secondary Objective]
 
 **Actual Output:**
 
-<img src="https://github.com/ethan-josh/JC-Exploring-JavaDateTime/blob/main/images/Ex3.png"/>
+<img src="https://github.com/ethan-josh/JC-Exploring-Arraylist/blob/main/images/Ex3.png"/>
 
 **Explanation:**
 
@@ -138,3 +138,6 @@ add(1, "Secondary Objective") inserts the new element at index 1. The existing e
 remove(2) removes the element at index 2 ("Tertiary Objective") and returns it. The list size decreases, and any elements after the removed one shift to the left to fill the gap.
 
 remove("Primary Objective") searches the list for the first occurrence of the given object and removes it.
+
+---
+
